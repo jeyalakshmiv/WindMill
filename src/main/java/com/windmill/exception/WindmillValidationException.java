@@ -7,7 +7,7 @@ import com.windmill.constants.ErrorCodes;
 
 /**
  * @author JEYALAKSHMIV
- *
+ *Customized Exception class
  */
 public class WindmillValidationException extends RuntimeException {
 
@@ -15,6 +15,7 @@ public class WindmillValidationException extends RuntimeException {
 	 * 
 	 */
 	private static final long serialVersionUID = -7857563107215320614L;
+	
 	private Integer errorCode;
 
 	public WindmillValidationException(String message, ErrorCodes errorCode) {

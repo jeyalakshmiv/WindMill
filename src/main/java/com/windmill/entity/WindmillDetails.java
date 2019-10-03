@@ -12,7 +12,6 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
 
-
 /**
  * @author JEYALAKSHMIV
  *
@@ -34,17 +33,16 @@ public class WindmillDetails implements Serializable {
 
 	@Column(name = "ADDRESS")
 	private String address;
-	
+
 	@Column(name = "LATITUDE")
 	private String latitude;
 
 	@Column(name = "LONGITUDE")
 	private String longtitude;
 
-	 @CreationTimestamp	
+	@CreationTimestamp
 	@Column(name = "REGISTERED_DATE")
 	private LocalDateTime registeredDate;
-
 
 	/**
 	 * @return the uniqueId
@@ -130,7 +128,4 @@ public class WindmillDetails implements Serializable {
 		registeredDate = registeredDate;
 	}
 
-	
-
-	
 }

@@ -3,12 +3,7 @@
  */
 package com.windmill.service;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -18,7 +13,7 @@ import com.windmill.entity.WindmillEnergyDetails;
 
 /**
  * @author JEYALAKSHMIV
- *
+ * Scheduler which will push the energy data to the server ever 5 min
  */
 @Component    
 @EnableScheduling
@@ -27,14 +22,17 @@ public class SchedulerConfiguration {
 	IWindmillDAO windmillDAO;
 
 	private static int i = 0;
-	 @EventListener(ApplicationReadyEvent.class)
-	//@Scheduled(fixedRate = 5000)
+	
+	/**
+	 * Cron Scheduler which will push the energy data to the server ever 5 min
+	 */
+	@Scheduled(cron="*/5 * * * *")
 	public void scheduleWindmillEnergy() {
 		System.out.println("inside the scheduler");
 		
 		WindmillEnergyDetails energyDetails = new WindmillEnergyDetails();
-		energyDetails.setUniqueId("23353453");
-		energyDetails.setEnergy_produced(i++);
+		energyDetails.setUniqueId("1234567891234567");
+		energyDetails.setEnergyProduced(i++);
 		windmillDAO.saveEnergyDetails(energyDetails);
 	}
 

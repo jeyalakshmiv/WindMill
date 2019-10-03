@@ -16,77 +16,74 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "WINDMILL_AVG_DETAILS")
-public class WindmillAvgDetails  implements Serializable {
-	
-private static final long serialVersionUID = 2605533701983160625L;
+public class WindmillAvgDetails implements Serializable {
 
-@Id
-private String uniqueId;	
+	private static final long serialVersionUID = 2605533701983160625L;
 
-@Column(name = "SUM")
-private double  sum;
+	@Id
+	private String uniqueId;
 
-@Column(name = "MIN")
-private double  min;
+	@Column(name = "SUM")
+	private double sum;
 
+	@Column(name = "MIN")
+	private double min;
 
-@Column(name = "MAX")
-private double  max;
+	@Column(name = "MAX")
+	private double max;
 
-@Column(name = "AVG")
-private double  avg;
+	@Column(name = "AVG")
+	private double avg;
 
-@Column(name = "AVG_DATE")
-private double  avg_date;
+	@Column(name = "AVG_DATE")
+	private double avg_date;
 
-public String getUniqueId() {
-	return uniqueId;
-}
+	public String getUniqueId() {
+		return uniqueId;
+	}
 
-public void setUniqueId(String uniqueId) {
-	this.uniqueId = uniqueId;
-}
+	public void setUniqueId(String uniqueId) {
+		this.uniqueId = uniqueId;
+	}
 
-public double getSum() {
-	return sum;
-}
+	public double getSum() {
+		return sum;
+	}
 
-public void setSum(double sum) {
-	this.sum = sum;
-}
+	public void setSum(double sum) {
+		this.sum = sum;
+	}
 
-public double getMin() {
-	return min;
-}
+	public double getMin() {
+		return min;
+	}
 
-public void setMin(double min) {
-	this.min = min;
-}
+	public void setMin(double min) {
+		this.min = min;
+	}
 
-public double getMax() {
-	return max;
-}
+	public double getMax() {
+		return max;
+	}
 
-public void setMax(double max) {
-	this.max = max;
-}
+	public void setMax(double max) {
+		this.max = max;
+	}
 
-public double getAvg() {
-	return avg;
-}
+	public double getAvg() {
+		return avg;
+	}
 
-public void setAvg(double avg) {
-	this.avg = avg;
-}
+	public void setAvg(double avg) {
+		this.avg = avg;
+	}
 
-public double getAvg_date() {
-	return avg_date;
-}
+	public double getAvg_date() {
+		return avg_date;
+	}
 
-public void setAvg_date(double avg_date) {
-	this.avg_date = avg_date;
-}
-
-
+	public void setAvg_date(double avg_date) {
+		this.avg_date = avg_date;
+	}
 
 }

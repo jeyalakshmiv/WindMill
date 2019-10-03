@@ -14,6 +14,14 @@ import com.windmill.entity.WindmillDetails;
  */
 public interface IWindmillService {
 
+	/**
+	 * @param windDetails
+	 * @return
+	 */
 	WindmillDetails registerWindmill(com.windmill.entity.WindmillDetails windDetails);
+	/**
+	 * @param uniqueId
+	 * @return
+	 */
 	List<WindmillAvgDetails> getChartData(String uniqueId);
 }

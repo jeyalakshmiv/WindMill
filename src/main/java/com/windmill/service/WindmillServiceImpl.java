@@ -25,10 +25,17 @@ import com.windmill.exception.WindmillValidationException;
 @Service
 @Transactional
 public class WindmillServiceImpl implements IWindmillService {
+	
+	/**
+	 * instantiate the IWindmillDAO
+	 */
 	@Autowired
 	IWindmillDAO windmillDAO;
 	
 
+	/**
+	 *Windmill registration
+	 */
 	@Override
 	public WindmillDetails registerWindmill(WindmillDetails windmillDetails) {
 		WindmillDetails windmillResponse = null;
@@ -47,12 +54,18 @@ public class WindmillServiceImpl implements IWindmillService {
 	}
 
 
+	/**
+	 * get the details for chart creation
+	 */
 	@Override
 	public List<WindmillAvgDetails> getChartData(String uniqueId) {
-		if(null != uniqueId) {
+		if(null != uniqueId) 
 			return windmillDAO.getChartData(uniqueId);
-		}
-		return null;
+		else
+			throw new WindmillValidationException(WindmillConstants.WINDMILL_ID_NOT_NULL,
+					ErrorCodes.WINDMILL_ID_NOT_NULL); 
+		
+		
 		
 	}
 

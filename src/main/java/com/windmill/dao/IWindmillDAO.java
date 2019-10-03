@@ -15,10 +15,21 @@ import com.windmill.entity.WindmillEnergyDetails;
  */
 public interface IWindmillDAO {
 
+	/**
+	 * @param windmillDetails
+	 * @return
+	 */
 	WindmillDetails registerWindmill(WindmillDetails windmillDetails);
 
+	/**
+	 * @param energyDetails
+	 */
 	void saveEnergyDetails(WindmillEnergyDetails energyDetails);
 
+	/**
+	 * @param uniqueId
+	 * @return
+	 */
 	List<WindmillAvgDetails> getChartData(String uniqueId);
 
 }
