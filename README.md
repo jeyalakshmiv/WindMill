@@ -13,7 +13,7 @@ SpringBoot - 2.1.9, Java -1.8, Hibernate -5.2.3, Database -H2 (1.4.197), Cron Sc
 
 --> Right Click on the project -->RunAs-->MavenBuild-->mvn clean install
 
--->Open WindmillfarmApplication-->RunAs-->JavaApplication
+-->Open WindmillfarmApplication.java-->RunAs-->JavaApplication
 
 ## Test the REST API
 
